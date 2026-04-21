@@ -28,7 +28,6 @@ function getInitialSlideIndex() {
 function App() {
   const [activeSlide, setActiveSlide] = useState(getInitialSlideIndex);
   const [stageScale, setStageScale] = useState(1);
-  const [showNotes, setShowNotes] = useState(false);
   const viewportRef = useRef(null);
   const slide = slides[activeSlide];
 
@@ -48,10 +47,6 @@ function App() {
 
       if (event.key === 'End') {
         setActiveSlide(slides.length - 1);
-      }
-
-      if (event.key.toLowerCase() === 'n') {
-        setShowNotes((current) => !current);
       }
     };
 
@@ -122,14 +117,6 @@ function App() {
         </div>
         <div className="deck-chrome__controls">
           <button
-            aria-pressed={showNotes}
-            className={`nav-button nav-button--notes ${showNotes ? 'nav-button--active' : ''}`}
-            onClick={() => setShowNotes((current) => !current)}
-            type="button"
-          >
-            Notes
-          </button>
-          <button
             className="nav-button"
             disabled={activeSlide === 0}
             onClick={() => setActiveSlide((current) => clampSlide(current - 1))}
@@ -172,8 +159,6 @@ function App() {
         </div>
       </main>
 
-      {showNotes ? <SpeakerNotesPanel slide={slide} /> : null}
-
       <footer className="progress-rail" aria-hidden="true">
         <div
           className="progress-rail__fill"
@@ -181,57 +166,6 @@ function App() {
         />
       </footer>
     </div>
-  );
-}
-
-function SpeakerNotesPanel({ slide }) {
-  const notes = slide.speakerNotes;
-
-  if (!notes) {
-    return null;
-  }
-
-  const sections = [
-    {
-      title: 'Objective',
-      items: [notes.objective],
-    },
-    {
-      title: 'Talk Track',
-      items: notes.talkTrack,
-    },
-    {
-      title: 'Back Pocket',
-      items: notes.backPocket,
-    },
-    {
-      title: 'Transition',
-      items: [notes.transition],
-    },
-  ].filter((section) => section.items && section.items.length > 0);
-
-  return (
-    <aside className="speaker-notes" aria-label="Speaker notes">
-      <div className="speaker-notes__header">
-        <div>
-          <span className="speaker-notes__eyebrow">Speaker Notes</span>
-          <strong>{slide.title}</strong>
-        </div>
-        <span className="speaker-notes__hint">Press N to hide</span>
-      </div>
-      <div className="speaker-notes__grid">
-        {sections.map((section) => (
-          <section key={section.title} className="speaker-notes__section">
-            <h3>{section.title}</h3>
-            <ul>
-              {section.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
-    </aside>
   );
 }
 
