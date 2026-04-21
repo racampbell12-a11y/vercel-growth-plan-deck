@@ -1,0 +1,207 @@
+{
+  "deck": {
+    "title": "Vercel 2026 Growth Plan: Credible Path to $650M",
+    "audience": "Product, Engineering, and Finance leadership",
+    "purpose": "45-minute executive strategy readout",
+    "slide_count": 15
+  },
+  "financials": {
+    "revenue_2025_m": 300,
+    "revenue_2026_target_m": 650,
+    "incremental_growth_required_m": 350,
+    "implied_yoy_growth_pct": 117
+  },
+  "gtm_mix_2026_m": {
+    "self_serve_smb": 160,
+    "self_serve_mid_market": 110,
+    "sales_led_mid_market": 150,
+    "sales_led_enterprise": 230,
+    "self_serve_total": 270,
+    "sales_led_total": 380,
+    "enterprise_share_of_total_pct": 35
+  },
+  "product_mix_2025_m": {
+    "core_platform": 115,
+    "observability": 55,
+    "data_storage": 65,
+    "security": 50,
+    "ai": 10
+  },
+  "engine_bridge_m": {
+    "base_2025": 300,
+    "increments_total": 350,
+    "engines": [
+      {
+        "name": "Core Platform",
+        "total_m": 115,
+        "committed_m": 115,
+        "upside_m": 0
+      },
+      {
+        "name": "PLG Conversion",
+        "total_m": 85,
+        "committed_m": 75,
+        "upside_m": 10
+      },
+      {
+        "name": "Attach",
+        "total_m": 50,
+        "committed_m": 50,
+        "upside_m": 0
+      },
+      {
+        "name": "AI",
+        "total_m": 50,
+        "committed_m": 40,
+        "upside_m": 10
+      },
+      {
+        "name": "Enterprise",
+        "total_m": 50,
+        "committed_m": 30,
+        "upside_m": 20
+      }
+    ],
+    "committed_total_m": 310,
+    "upside_total_m": 40,
+    "target_2026_m": 650
+  },
+  "engine_weights": {
+    "committed_plan_reliance": [
+      "Core Platform",
+      "PLG Conversion",
+      "Attach",
+      "AI",
+      "Enterprise"
+    ],
+    "strategic_investment_priority": [
+      "Enterprise",
+      "AI",
+      "Core Platform",
+      "PLG Conversion",
+      "Attach"
+    ]
+  },
+  "segment_execution_reality": [
+    {
+      "segment": "Self-Serve SMB",
+      "status": "PROVEN",
+      "current_state": "Strongest natural fit. Developer-led, fast adoption, high in-year signal.",
+      "implication_2026": "Reliable base engine. Focus on conversion quality."
+    },
+    {
+      "segment": "Self-Serve Mid-Market",
+      "status": "PROVEN",
+      "current_state": "Best bridge from individual usage to denser team monetization.",
+      "implication_2026": "Should carry more weight in the committed plan."
+    },
+    {
+      "segment": "Sales-Led Mid-Market",
+      "status": "BUILDING",
+      "current_state": "Strong product pull with more manageable cycles than Enterprise.",
+      "implication_2026": "Credible growth engine if product-qualified conversion is working."
+    },
+    {
+      "segment": "Sales-Led Enterprise",
+      "status": "EARLY",
+      "current_state": "Highest upside per account, but depends on migration, security, and delivery readiness.",
+      "implication_2026": "Strategically prioritized, conservatively underwritten."
+    }
+  ],
+  "operating_model": {
+    "forums": [
+      {
+        "name": "Embedded product forums",
+        "cadence": "Ongoing",
+        "focus": "Roadmap reviews, PRDs, launch reviews, post-launch lookbacks",
+        "output": "Early viability input and tradeoff decisions"
+      },
+      {
+        "name": "Weekly Metrics Review",
+        "cadence": "Weekly",
+        "focus": "Core metrics versus plan, directional trends, anomalies, owner assignment",
+        "output": "Async follow-up, investigations, monthly review inputs"
+      },
+      {
+        "name": "Monthly Core review",
+        "cadence": "Monthly",
+        "focus": "Core monetization, PLG conversion, relevant enterprise and attach trends",
+        "output": "Trend view, forecast update, actions"
+      },
+      {
+        "name": "Monthly AI review",
+        "cadence": "Monthly",
+        "focus": "AI productionization, model/token economics, relevant enterprise and attach trends",
+        "output": "Trend view, forecast update, actions"
+      },
+      {
+        "name": "Quarterly executive review",
+        "cadence": "Quarterly",
+        "focus": "Integrated portfolio view, resource shifts, major tradeoffs, product gaps",
+        "output": "Decisions, reallocation, updated priorities"
+      }
+    ],
+    "footer": [
+      "Shared scorecard",
+      "AI-generated pre-reads",
+      "Clear owners",
+      "Decision log"
+    ]
+  },
+  "risks": {
+    "enterprise": {
+      "breaks": [
+        "**Security / compliance / governance gaps**",
+        "**Migration complexity** and weak services / partner capacity",
+        "Slow time from **evaluation to production**"
+      ],
+      "monitors": [
+        "Time from **technical evaluation to technical win**",
+        "Time from **technical win to go-live**",
+        "**Migration scope slippage**",
+        "**Enterprise product gap backlog**",
+        "**Repeatable reference migrations**"
+      ]
+    },
+    "ai": {
+      "breaks": [
+        "Thin **pass-through token spend**",
+        "Weak **pull-through into Core, Observability, Security, and Storage**",
+        "Model / workload mix **compresses margin**"
+      ],
+      "monitors": [
+        "AI apps **reaching production**",
+        "**Revenue per AI production app**",
+        "Core / attach revenue per AI account vs **non-AI account**",
+        "**Attach rate** on AI accounts",
+        "**Gross margin** by AI workload type"
+      ]
+    },
+    "plg_conversion": {
+      "breaks": [
+        "Projects do not **productionize**",
+        "Collaboration does not convert into **paid expansion**",
+        "AI-native channels bring **lower-quality users** than legacy channels"
+      ],
+      "monitors": [
+        "Time from first project to **production deployment**",
+        "Time from first deploy to **team expansion**",
+        "**Product-qualified to opportunity conversion**",
+        "Revenue uplift from **commercial assist**",
+        "Conversion rates **by channel**"
+      ]
+    },
+    "macro": {
+      "breaks": [
+        "Developers default to **agent-selected tools** and Vercel loses distribution advantage",
+        "Hosting / deployment **commoditizes** or is pulled in-house by AI labs / hyperscalers"
+      ],
+      "monitors": [
+        "Share of acquisition from **agent-native channels**",
+        "**Conversion and retention** by channel",
+        "**Price realization / discount trends**",
+        "Win-loss trends vs **Cloudflare, AWS, and open source**"
+      ]
+    }
+  }
+}
